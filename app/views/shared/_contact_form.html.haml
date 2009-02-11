@@ -1,0 +1,16 @@
+#contact_form
+  #ajax_flash
+    &nbsp;
+  - form_for :contact, :url => {:controller => 'contact', :action => 'create'} do |f|
+    #left_form
+      = f.label :message
+      = f.text_area :message, :size => '30x10'
+      = f.submit 'Send Message'
+    #right_form
+      = f.label :name
+      = f.text_field :name
+      = f.label :email
+      = f.text_field :email
+      = f.label :website
+      = f.text_field :website
+    #clear_both

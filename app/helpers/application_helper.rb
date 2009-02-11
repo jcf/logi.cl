@@ -1,6 +1,18 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
+  def auth_token_javascript
+    javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
+  end
+
+  def render_flash
+    return unless flash.present?
+    html = flash.collect do |key, msg|
+      content_tag(:div, msg, :class => key, :id => "flash-#{key}")
+    end
+    html
+  end
+
   def body_attrs
     {:id => controller.controller_name,
      :class => controller.action_name}
@@ -8,9 +20,8 @@ module ApplicationHelper
 
   def tab_to(value, url, html_options={})
     element_class = current_page?(url) ? 'active' : 'inactive'
-    link_to value, url, :class => element_class
+    link_to value, url, {:class => element_class}.merge(html_options)
   end
-  
 
   def lorem(link_frequency=0)
     link_frequency = 20 if link_frequency > 20

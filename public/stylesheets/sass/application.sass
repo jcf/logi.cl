@@ -5,7 +5,12 @@
 !blue = #09c
 !gold = #f90
 !green = #9c0
+!red = #c00
 !link_color = !blue
+
+=widths
+  :min-width 600px
+  :max-width 1000px
 
 =squashed_heading
   :font-family 'Helvetica Neue', helvetica, sans-serif
@@ -72,16 +77,15 @@ a:hover
   :clear both
 
 #header_background
-  :margin 0 0 10px
-  :padding 0
+  :margin 0
+  :padding 20px 0 0
   / :background-color #ddd
-  / :background #eff8dd url('/images/lighter_grass.jpg') repeat-x left 40px
+  :background #eff8dd url('/images/lighter_grass.jpg') repeat-x top
   :background-color #6cf
   :border-bottom = 10px solid !text_color
 
   #header
-    :min-width 600px
-    :max-width 1000px
+    +widths
     :margin 0 auto
     :padding 0 20px
 
@@ -94,6 +98,7 @@ a:hover
         :color = !text_color
         :text-decoration none
         :background transparent
+        :display none
 
     ul#navigation
       :list-style none
@@ -118,16 +123,86 @@ a:hover
           :color #fff
         a.active
           :color #fff
-        a.inactive
-          :opacity 0.9
-        a.inactive:hover
-          :opacity 1
+
+#contact_form
+  :display none
+  :background-color = !text_color
+  :margin 0
+  :padding 10px 0 15px
+
+  #ajax_flash
+    :display none
+    :margin 0 auto
+    :padding 0 20px
+    #flash_message
+      / :display none
+      :min-width 600px
+      :max-width 1000px
+      :margin 0 auto 20px
+      :padding 0
+
+      p
+        :color = !text_color
+        :background-color #fff
+        :border 1px solid #ccc
+        :margin 0
+        :padding 10px 20px
+
+        &.success
+          :background-color #e3ffd1
+          :border 1px solid #416223
+          :color #000
+        &.failure
+          :background-color #fdd
+          :border 1px solid #ff6f68
+          :color #000
+
+  form
+    +widths
+    :color #fff
+    :margin 0 auto
+    :padding 0 20px
+
+    #left_form
+      :float left
+      :margin-right 20px
+    #right_form
+
+    label
+      :font bold 1.2em 'Helvetica neue', helvetica, sans-serif
+      :color #ccc
+    input[type='text'],
+    textarea
+      :background-color #fff
+      :border 1px solid #fff
+      :display block
+      :margin-top 2px
+      :margin-bottom 8px
+      :font 1.4em 'Helvetica neue', helvetica, sans-serif
+      :padding 0.2em
+
+      &:focus
+        :background-color #fff
+        :border = 1px solid !link_color
+
+    input[type='submit']
+      :font bold 1.6em 'Helvetica neue', helvetica, sans-serif
+      :letter-spacing -0.05em
+      :color #333
+      :background-color #fff
+      :border 1px solid #ccc
+      :padding 0.2em
+      :margin-top 0.4em
+      :width 8em
+      :height 2em
+      
+      &:hover
+        :color = !link_color
 
 #content
-  :margin 0 auto
+  +widths
+  :margin 20px auto
   :padding 0 20px
-  :min-width 600px
-  :max-width 1000px
 
 #sidebar
   :float right
@@ -150,8 +225,7 @@ a:hover
   :border-top 5px solid #ccc
 
   #footer
-    :min-width 600px
-    :max-width 1000px
+    +widths
     :margin 0 auto
     :padding 10px 20px
 

@@ -7,7 +7,9 @@
 
     =stylesheet_link_tag 'reset'
     =stylesheet_link_tag 'application'
-    =javascript_include_tag :all
+    =javascript_include_tag 'jquery-1.3.1.min'
+    =auth_token_javascript
+    =javascript_include_tag 'application'
 
   %body{ body_attrs }
 
@@ -16,12 +18,15 @@
         %h1
           =link_to "logi.cl", root_url
         %ul#navigation
-          %li= tab_to 'Home', root_url
-          %li= tab_to 'About', about_url
-          %li= tab_to 'Services', services_url
-          %li= tab_to 'Contact', contact_url
+          %li= tab_to 'logi.cl', root_url
+          %li= tab_to 'about', about_url
+          %li= tab_to 'services', services_url
+          %li= tab_to 'contact', contact_url, :id => 'contact_tab'
     / #banner
     /   #tree
+
+    / =render_flash
+    =render :partial => 'shared/contact_form'
 
     #content
       #sidebar
