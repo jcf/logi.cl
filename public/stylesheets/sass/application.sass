@@ -1,0 +1,167 @@
+!border_radius = 0.4em
+/ !blue = #06f
+/ !dark_blue = #09c
+!text_color = #333
+!blue = #09c
+!gold = #f90
+!green = #9c0
+!link_color = !blue
+
+=squashed_heading
+  :font-family 'Helvetica Neue', helvetica, sans-serif
+  :font-weight bold
+  :letter-spacing -0.05em
+
+=rounded_corners
+  :border-radius = !border_radius
+  :-webkit-border-radius = !border_radius
+  :-moz-border-radius = !border_radius
+
+=rounded_top_corners
+  :border-top-left-radius = !border_radius
+  :border-top-right-radius = !border_radius
+  :-webkit-border-top-left-radius = !border_radius
+  :-webkit-border-top-right-radius = !border_radius
+  :-moz-border-radius-topleft = !border_radius
+  :-moz-border-radius-topright = !border_radius
+
+body
+  :font 12px 'Lucida Grande', sans-serif
+  :color = !text_color
+  :background-color #fff
+  :margin 0
+  :padding 0
+  :line-height 1.8em
+
+h1, h2, h3, h4, h5, h6
+  +squashed_heading
+  :color !text_color
+  :line-height 1.6em
+
+h1
+  :font-size 48px
+h2
+  :font-size 36px
+h3
+  :font-size 28px
+h4
+  :font-size 18px
+h5
+  :font-size 14px
+h6
+  :font-size 12px
+
+p
+  :margin 0 0 1.6em
+
+a:link
+  :color = !link_color
+a:active
+  :background-color = !link_color
+  :color #000
+a:visited
+  :color = !link_color + #333
+a:hover
+  :color #fff
+  :background-color = !link_color
+  :text-decoration none
+  :padding 1px
+  :margin -1px
+
+#clear_both
+  :clear both
+
+#header_background
+  :margin 0 0 10px
+  :padding 0
+  / :background-color #ddd
+  / :background #eff8dd url('/images/lighter_grass.jpg') repeat-x left 40px
+  :background-color #6cf
+  :border-bottom = 10px solid !text_color
+
+  #header
+    :min-width 600px
+    :max-width 1000px
+    :margin 0 auto
+    :padding 0 20px
+
+    h1
+      a:link,
+      a:active,
+      a:visited,
+      a:hover
+        +squashed_heading
+        :color = !text_color
+        :text-decoration none
+        :background transparent
+
+    ul#navigation
+      :list-style none
+
+      li
+        :display inline
+        :padding-right 5px
+
+        a:link,
+        a:active,
+        a:visited,
+        a:hover
+          +squashed_heading
+          +rounded_top_corners
+          :background-color = !text_color
+          :font-size 18px
+          :padding 5px 10px
+          :margin 0
+          :color #6cf
+          :text-decoration none
+        a:hover
+          :color #fff
+        a.active
+          :color #fff
+        a.inactive
+          :opacity 0.9
+        a.inactive:hover
+          :opacity 1
+
+#content
+  :margin 0 auto
+  :padding 0 20px
+  :min-width 600px
+  :max-width 1000px
+
+#sidebar
+  :float right
+  :width 250px
+  :padding 0 0 50px 50px
+  :font-size 0.9em
+  :color = !text_color
+
+  .widget
+    :margin-bottom 4em
+
+    p
+      :margin-bottom 0.8em
+
+#footer_background
+  :margin 0
+  :padding 0
+  :min-height 150px
+  :background-color #eee
+  :border-top 5px solid #ccc
+
+  #footer
+    :min-width 600px
+    :max-width 1000px
+    :margin 0 auto
+    :padding 10px 20px
+
+    p
+      :color #666
+      :font-size 0.9em
+
+    ul#footer_navigation
+      :list-style none
+
+      li
+        :display inline
+        :padding-right 20px

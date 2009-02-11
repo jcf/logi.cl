@@ -1,0 +1,42 @@
+!!! XML
+!!!
+%html{ html_attrs }
+  %head
+
+    %title Home &mdash; logi.cl
+
+    =stylesheet_link_tag 'reset'
+    =stylesheet_link_tag 'application'
+    =javascript_include_tag :all
+
+  %body{ body_attrs }
+
+    #header_background
+      #header
+        %h1
+          =link_to "logi.cl", root_url
+        %ul#navigation
+          %li= tab_to 'Home', root_url
+          %li= tab_to 'About', about_url
+          %li= tab_to 'Services', services_url
+          %li= tab_to 'Contact', contact_url
+    / #banner
+    /   #tree
+
+    #content
+      #sidebar
+        =render :partial => 'shared/sidebar'
+      =yield
+
+    #clear_both
+
+    #footer_background
+      #footer
+
+        %p= lorem
+
+        %ul#footer_navigation
+          %li= link_to 'Home', '#'
+          %li= link_to 'About', '#', :class => 'green'
+          %li= link_to 'Services', '#', :class => 'gold'
+          %li= link_to "Twitter", "http://twitter.com/jamesconroyfinn"

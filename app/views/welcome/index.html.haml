@@ -1,0 +1,20 @@
+%h2 Welcome to logi.cl
+%p= lorem(2)
+%p= lorem
+%p= lorem(1)
+
+%h3 Just a little more
+%p= lorem(3)
+%p= lorem(2)
+
+%h4 On a side note
+%p= lorem(1)
+
+=content_for :sidebar do
+  %h2 sidebar
+  .widget
+    %p= lorem(2)
+    %p= lorem(2)
+    %p= lorem(2)
+  .widget
+    %p= lorem(2)
