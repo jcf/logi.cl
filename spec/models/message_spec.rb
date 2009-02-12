@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-context "Contact class with fixtures loaded" do
-  fixtures :contacts
+context "Message class with fixtures loaded" do
+  fixtures :message
 
-  specify "should count two Contacts" do
-    Contact.count.should_be 2
+  specify "should count two Messages" do
+    Message.count.should_be 2
   end
 
   specify "should have more specifications" do
