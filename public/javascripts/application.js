@@ -1,6 +1,7 @@
 $(document).ready(function() {
-  $("#contact_tab").bind("click", function() {
-    $("#contact_form").slideToggle(200);
+  $("#contact_tab").bind("click", function(e) {
+    speed = e.shiftKey ? 1000 : 200
+    $("#contact_form").slideToggle(speed);
     return false;
   });
   $("#contact_form form").bind("submit", function() {
