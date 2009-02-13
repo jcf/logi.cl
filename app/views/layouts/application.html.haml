@@ -21,12 +21,14 @@
           %li= tab_to 'logi.cl', root_url
           %li= tab_to 'about', about_url
           %li= tab_to 'services', services_url
-          %li= tab_to 'contact', contact_url, :id => 'contact_tab'
+          %li= tab_to 'contact', messages_url, :id => 'contact_tab'
     / #banner
     /   #tree
 
-    / =render_flash
     =render :partial => 'shared/contact_form'
+
+    #flash
+      =render_flash
 
     #content
       #sidebar

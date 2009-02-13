@@ -2,13 +2,5 @@
 assets
 coverage
 log/*.log
-public/index.html
-public/about-us
-public/advisor
-public/client
-public/industry-partner
-public/solution
-public/uploads
-public/advisors
-public/privacy-policy
+db/*.sqlite3
 tmp/**

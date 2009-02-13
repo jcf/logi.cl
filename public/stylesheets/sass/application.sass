@@ -7,21 +7,17 @@
 !green = #9c0
 !red = #c00
 !link_color = !blue
-
 =widths
   :min-width 600px
   :max-width 1000px
-
 =squashed_heading
   :font-family 'Helvetica Neue', helvetica, sans-serif
   :font-weight bold
   :letter-spacing -0.05em
-
 =rounded_corners
   :border-radius = !border_radius
   :-webkit-border-radius = !border_radius
   :-moz-border-radius = !border_radius
-
 =rounded_top_corners
   :border-top-left-radius = !border_radius
   :border-top-right-radius = !border_radius
@@ -29,7 +25,6 @@
   :-webkit-border-top-right-radius = !border_radius
   :-moz-border-radius-topleft = !border_radius
   :-moz-border-radius-topright = !border_radius
-
 body
   :font 12px 'Lucida Grande', sans-serif
   :color = !text_color
@@ -41,20 +36,25 @@ body
 h1, h2, h3, h4, h5, h6
   +squashed_heading
   :color !text_color
-  :line-height 1.6em
 
 h1
   :font-size 48px
+  :margin-bottom 0.6em
 h2
   :font-size 36px
+  :margin-bottom 0.6em
 h3
   :font-size 28px
+  :margin-bottom 0.6em
 h4
   :font-size 18px
+  :margin-bottom 0.6em
 h5
   :font-size 14px
+  :margin-bottom 0.6em
 h6
   :font-size 12px
+  :margin-bottom 0.6em
 
 p
   :margin 0 0 1.6em
@@ -130,33 +130,6 @@ a:hover
   :margin 0
   :padding 10px 0 15px
 
-  #ajax_flash
-    :display none
-    :margin 0 auto
-    :padding 0 20px
-    #flash_message
-      / :display none
-      :min-width 600px
-      :max-width 1000px
-      :margin 0 auto 20px
-      :padding 0
-
-      p
-        :color = !text_color
-        :background-color #fff
-        :border 1px solid #ccc
-        :margin 0
-        :padding 10px 20px
-
-        &.success
-          :background-color #e3ffd1
-          :border 1px solid #416223
-          :color #000
-        &.failure
-          :background-color #fdd
-          :border 1px solid #ff6f68
-          :color #000
-
   form
     +widths
     :color #fff
@@ -178,7 +151,7 @@ a:hover
       :display block
       :margin-top 2px
       :margin-bottom 8px
-      :font 1.4em 'Helvetica neue', helvetica, sans-serif
+      :font 1em 'monaco', mono
       :padding 0.2em
 
       &:focus
@@ -199,6 +172,35 @@ a:hover
       &:hover
         :color = !link_color
 
+#flash
+  :margin 0 auto
+  :padding 0 20px
+  #flash_box
+    :min-width 600px
+    :max-width 1000px
+    :margin 0 auto 20px
+    :padding 20px 0 0
+
+    p
+      :color = !text_color
+      :background-color #fff
+      :border 1px solid #ccc
+      :margin 0
+      :padding 10px 20px
+
+      &.success
+        :background-color #e3ffd1
+        :border 1px solid #9c0
+        :color #000
+      &.failure
+        :background-color #fdd
+        :border 1px solid #ff6f68
+        :color #000
+      &.notice
+        :background-color #fffbd6
+        :border 1px solid #ffce47
+        :color #000
+
 #content
   +widths
   :margin 20px auto
@@ -216,6 +218,65 @@ a:hover
 
     p
       :margin-bottom 0.8em
+
+div.errorExplanation
+  h2
+    :font-size 2.4em
+    :color #c00
+  ul
+    +rounded_corners
+    :padding 10px 0
+    :margin-right 300px
+    :background-color #eee
+    :color #333
+    li
+      :margin-left 15px
+  p
+    :font-weight bold
+    :margin 0
+    :padding 0
+
+.fieldWithErrors input,
+.fieldWithErrors textarea
+  :border 1px solid #c00 !important
+
+form#new_message
+
+  label
+    :font bold 1.2em 'Helvetica neue', helvetica, sans-serif
+    :color #333
+  input[type='text'],
+  textarea
+    :background-color #fff
+    :border 1px solid #ccc
+    :display block
+    :margin-top 2px
+    :margin-bottom 8px
+    :font 1em 'monaco', mono
+    :padding 0.2em
+
+    &:focus
+      :background-color #fff
+      :border = 1px solid !link_color
+
+  input[type='submit'],
+  input[type='button']
+    :font bold 1.6em 'Helvetica neue', helvetica, sans-serif
+    :letter-spacing -0.05em
+    :color #333
+    :background-color #fff
+    :border 1px solid #ccc
+    :padding 0.2em
+    :margin 0.4em 10px 0.4em 0
+    :width 8em
+    :height 2em
+
+    &.cancel
+      :color #666
+    &:hover
+      :color = !link_color
+    &.cancel:hover
+      :color = !red
 
 #footer_background
   :margin 0

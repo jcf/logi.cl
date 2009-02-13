@@ -12,26 +12,31 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Helvetica Neue', helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: -0.05em;
-  color: !text_color;
-  line-height: 1.6em; }
+  color: !text_color; }
 
 h1 {
-  font-size: 48px; }
+  font-size: 48px;
+  margin-bottom: 0.6em; }
 
 h2 {
-  font-size: 36px; }
+  font-size: 36px;
+  margin-bottom: 0.6em; }
 
 h3 {
-  font-size: 28px; }
+  font-size: 28px;
+  margin-bottom: 0.6em; }
 
 h4 {
-  font-size: 18px; }
+  font-size: 18px;
+  margin-bottom: 0.6em; }
 
 h5 {
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 0.6em; }
 
 h6 {
-  font-size: 12px; }
+  font-size: 12px;
+  margin-bottom: 0.6em; }
 
 p {
   margin: 0 0 1.6em; }
@@ -106,29 +111,6 @@ a:hover {
   background-color: #333333;
   margin: 0;
   padding: 10px 0 15px; }
-#contact_form #ajax_flash {
-  display: none;
-  margin: 0 auto;
-  padding: 0 20px; }
-#contact_form #ajax_flash #flash_message {
-  min-width: 600px;
-  max-width: 1000px;
-  margin: 0 auto 20px;
-  padding: 0; }
-#contact_form #ajax_flash #flash_message p {
-  color: #333333;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  margin: 0;
-  padding: 10px 20px; }
-#contact_form #ajax_flash #flash_message p.success {
-  background-color: #e3ffd1;
-  border: 1px solid #416223;
-  color: #000; }
-#contact_form #ajax_flash #flash_message p.failure {
-  background-color: #fdd;
-  border: 1px solid #ff6f68;
-  color: #000; }
 #contact_form form {
   min-width: 600px;
   max-width: 1000px;
@@ -147,7 +129,7 @@ a:hover {
   display: block;
   margin-top: 2px;
   margin-bottom: 8px;
-  font: 1.4em 'Helvetica neue', helvetica, sans-serif;
+  font: 1em 'monaco', mono;
   padding: 0.2em; }
 #contact_form form input[type='text']:focus, #contact_form form textarea:focus {
   background-color: #fff;
@@ -165,6 +147,33 @@ a:hover {
 #contact_form form input[type='submit']:hover {
   color: #0099cc; }
 
+#flash {
+  margin: 0 auto;
+  padding: 0 20px; }
+#flash #flash_box {
+  min-width: 600px;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 20px 0 0; }
+#flash #flash_box p {
+  color: #333333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 10px 20px; }
+#flash #flash_box p.success {
+  background-color: #e3ffd1;
+  border: 1px solid #9c0;
+  color: #000; }
+#flash #flash_box p.failure {
+  background-color: #fdd;
+  border: 1px solid #ff6f68;
+  color: #000; }
+#flash #flash_box p.notice {
+  background-color: #fffbd6;
+  border: 1px solid #ffce47;
+  color: #000; }
+
 #content {
   min-width: 600px;
   max-width: 1000px;
@@ -181,6 +190,58 @@ a:hover {
   margin-bottom: 4em; }
 #sidebar .widget p {
   margin-bottom: 0.8em; }
+
+div.errorExplanation h2 {
+  font-size: 2.4em;
+  color: #c00; }
+div.errorExplanation ul {
+  border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  padding: 10px 0;
+  margin-right: 300px;
+  background-color: #eee;
+  color: #333; }
+div.errorExplanation ul li {
+  margin-left: 15px; }
+div.errorExplanation p {
+  font-weight: bold;
+  margin: 0;
+  padding: 0; }
+
+.fieldWithErrors input, .fieldWithErrors textarea {
+  border: 1px solid #c00 !important; }
+
+form#new_message label {
+  font: bold 1.2em 'Helvetica neue', helvetica, sans-serif;
+  color: #333; }
+form#new_message input[type='text'], form#new_message textarea {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  font: 1em 'monaco', mono;
+  padding: 0.2em; }
+form#new_message input[type='text']:focus, form#new_message textarea:focus {
+  background-color: #fff;
+  border: 1px solid #0099cc; }
+form#new_message input[type='submit'], form#new_message input[type='button'] {
+  font: bold 1.6em 'Helvetica neue', helvetica, sans-serif;
+  letter-spacing: -0.05em;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.2em;
+  margin: 0.4em 10px 0.4em 0;
+  width: 8em;
+  height: 2em; }
+form#new_message input[type='submit'].cancel, form#new_message input[type='button'].cancel {
+  color: #666; }
+form#new_message input[type='submit']:hover, form#new_message input[type='button']:hover {
+  color: #0099cc; }
+form#new_message input[type='submit'].cancel:hover, form#new_message input[type='button'].cancel:hover {
+  color: #cc0000; }
 
 #footer_background {
   margin: 0;

@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 context "Message class with fixtures loaded" do
-  fixtures :message
+  fixtures :messages
 
   specify "should count two Messages" do
     Message.count.should_be 2
