@@ -1,6 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :slugs
-  map.resources :visitors
+ActionController::Routing::Routes.draw do |map|  map.resources :visitors
   map.resources :links
   map.resources :messages
 
