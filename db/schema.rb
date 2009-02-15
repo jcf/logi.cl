@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090212215329) do
+ActiveRecord::Schema.define(:version => 20090215151435) do
+
+  create_table "links", :force => true do |t|
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", :force => true do |t|
     t.string   "name"
@@ -17,6 +23,21 @@ ActiveRecord::Schema.define(:version => 20090212215329) do
     t.string   "website"
     t.text     "body"
     t.string   "remote_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "slugs", :force => true do |t|
+    t.string   "text"
+    t.integer  "link_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "visitors", :force => true do |t|
+    t.text     "user_agent"
+    t.integer  "clicks"
+    t.string   "remote_addr"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
