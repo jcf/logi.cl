@@ -1,0 +1,20 @@
+<h1>Editing slug</h1>
+
+<% form_for(@slug) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </p>
+  <p>
+    <%= f.label :link_id %><br />
+    <%= f.text_field :link_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @slug %> |
+<%= link_to 'Back', slugs_path %>

@@ -1,4 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :slugs
+  map.resources :visitors
+  map.resources :links
   map.resources :messages
 
   map.about '/about', :controller => 'about'
@@ -8,4 +11,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+
+  map.connect '/preview/:id', :controller => 'link', :action => 'preview'
+  map.connect '/:id', :controller => 'link', :action => 'go'
 end

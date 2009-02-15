@@ -1,0 +1,24 @@
+<h1>Listing visitors</h1>
+
+<table>
+  <tr>
+    <th>User agent</th>
+    <th>Clicks</th>
+    <th>Remote addr</th>
+  </tr>
+
+<% for visitor in @visitors %>
+  <tr>
+    <td><%=h visitor.user_agent %></td>
+    <td><%=h visitor.clicks %></td>
+    <td><%=h visitor.remote_addr %></td>
+    <td><%= link_to 'Show', visitor %></td>
+    <td><%= link_to 'Edit', edit_visitor_path(visitor) %></td>
+    <td><%= link_to 'Destroy', visitor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New visitor', new_visitor_path %>
