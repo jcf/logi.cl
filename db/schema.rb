@@ -35,13 +35,6 @@ ActiveRecord::Schema.define(:version => 20090215163542) do
     t.datetime "updated_at"
   end
 
-  create_table "slugs", :force => true do |t|
-    t.string   "text"
-    t.integer  "link_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "visitors", :force => true do |t|
     t.text     "user_agent"
     t.integer  "clicks"

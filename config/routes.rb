@@ -10,6 +10,6 @@ ActionController::Routing::Routes.draw do |map|  map.resources :visitors
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 
-  map.connect '/preview/:id', :controller => 'link', :action => 'preview'
-  map.connect '/:id', :controller => 'link', :action => 'go'
+  map.connect '/preview/:id', :controller => 'links', :action => 'preview'
+  map.connect '/:id', :controller => 'links', :action => 'go'
 end

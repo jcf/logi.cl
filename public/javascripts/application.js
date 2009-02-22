@@ -1,3 +1,27 @@
+// Redirect = {
+//   ticks: 5,
+//   do_redirect: function() {
+//     Redirect.ticks = undefined;
+//     alert(REDIRECT_URL)
+//   },
+//   update_countdown: function(seconds) {
+//     $('#countdown').text('You will be automatically redirected in ' + 
+//       seconds + ' seconds');
+//   },
+//   tick: function() {
+//     if(Redirect.ticks > 0 && Redirect.ticks != undefined) {
+//       Redirect.update_countdown(Redirect.ticks)
+//       Redirect.ticks -= 1
+//       var timer = setInterval(Redirect.tick, 1000);
+//     } else {
+//       Redirect.do_redirect()
+//     }
+//   },
+//   start_countdown: function() {
+//     Redirect.tick()
+//   }
+// }
+
 $(document).ready(function() {
   $("#contact_tab").bind("click", function(e) {
     speed = e.shiftKey ? 1000 : 200

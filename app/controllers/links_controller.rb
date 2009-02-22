@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
-  # GET /links
-  # GET /links.xml
+  before_filter :find_by_slug_or_redirect, :only => :preview
+
   def index
     @links = Link.find(:all)
 
@@ -10,8 +10,6 @@ class LinksController < ApplicationController
     end
   end
 
-  # GET /links/1
-  # GET /links/1.xml
   def show
     @link = Link.find(params[:id])
 
@@ -21,8 +19,6 @@ class LinksController < ApplicationController
     end
   end
 
-  # GET /links/new
-  # GET /links/new.xml
   def new
     @link = Link.new
 
@@ -32,13 +28,10 @@ class LinksController < ApplicationController
     end
   end
 
-  # GET /links/1/edit
   def edit
     @link = Link.find(params[:id])
   end
 
-  # POST /links
-  # POST /links.xml
   def create
     @link = Link.new(params[:link])
 
@@ -54,8 +47,6 @@ class LinksController < ApplicationController
     end
   end
 
-  # PUT /links/1
-  # PUT /links/1.xml
   def update
     @link = Link.find(params[:id])
 
@@ -71,8 +62,6 @@ class LinksController < ApplicationController
     end
   end
 
-  # DELETE /links/1
-  # DELETE /links/1.xml
   def destroy
     @link = Link.find(params[:id])
     @link.destroy
@@ -82,4 +71,17 @@ class LinksController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def preview
+    render :layout => 'preview'
+  end
+
+  private
+
+  def find_by_slug_or_redirect
+    unless params[:id].present? && @link = Link.find_by_slug(params[:id])
+      redirect_to root_url
+    end
+  end
+  
 end

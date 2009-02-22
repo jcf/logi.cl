@@ -2,7 +2,7 @@ class Link < ActiveRecord::Base
   require "uri"
   has_and_belongs_to_many :visitors
 
-  validates_uniqueness_of :url
+  validates_uniqueness_of :target
   validate :uri_parses
 
   before_create :create_slug
@@ -10,7 +10,7 @@ class Link < ActiveRecord::Base
   private
 
   def uri_parses
-    URI.parse(self.url)
+    URI.parse(self[:target])
   rescue URI::InvalidURIError
     errors.add(:url, 'does not appear to be valid')
   end
