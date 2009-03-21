@@ -6,6 +6,7 @@
       = f.label :message
       = f.text_area :message, :size => '30x10'
       = f.submit 'Send Message'
+      = button_to_function 'Cancel', "$('#contact_form').slideUp();", :class => 'cancel'
     #right_form
       = f.label :name
       = f.text_field :name
