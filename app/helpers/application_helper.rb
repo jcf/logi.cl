@@ -54,6 +54,8 @@ module ApplicationHelper
     end
     image_tag "#{path}/#{name}.png", options
   end
-  
 
+  def clear(tag=:br, options={})
+    content_tag(tag, '', { :class => 'clear_both' }.merge(options))
+  end
 end

@@ -22,6 +22,7 @@
           %li= tab_to 'about', about_url
           %li= tab_to 'services', services_url
           %li= tab_to 'contact', contact_url, :id => 'contact_tab'
+          = clear
     / #banner
     /   #tree
 
@@ -33,7 +34,7 @@
         =render :partial => 'shared/sidebar'
       =yield
 
-    #clear_both
+    = clear
 
     #footer_background
       #footer
