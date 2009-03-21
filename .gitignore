@@ -2,6 +2,7 @@
 assets
 coverage
 log/*.log
+db/*.sqlite3
 public/index.html
 public/about-us
 public/advisor
