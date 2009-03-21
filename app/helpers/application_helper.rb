@@ -13,9 +13,9 @@ module ApplicationHelper
     html
   end
 
-  def body_attrs
+  def body_attrs(override={})
     {:id => controller.controller_name,
-     :class => controller.action_name}
+     :class => controller.action_name }.merge(override)
   end
 
   def tab_to(value, url, html_options={})
@@ -43,5 +43,17 @@ module ApplicationHelper
       end
     end
   end
+
+  def icon_tag(name, options={})
+    # shadowless?
+    path = if options.include?(:shadowless)
+      options.delete(:shadowless)
+      '/images/fugue/_shadowless'
+    else
+      '/images/fugue'
+    end
+    image_tag "#{path}/#{name}.png", options
+  end
+  
 
 end
