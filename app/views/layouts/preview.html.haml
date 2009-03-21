@@ -3,7 +3,7 @@
 %html{ html_attrs }
   %head
 
-    %title Home &mdash; logi.cl
+    %title= "#{@link.target} &mdash; logi.cl"
 
     =stylesheet_link_tag 'reset'
     =stylesheet_link_tag 'application'
@@ -22,8 +22,6 @@
           %li= tab_to 'about', about_url
           %li= tab_to 'services', services_url
           %li= tab_to 'contact', messages_url, :id => 'contact_tab'
-    / #banner
-    /   #tree
 
     =render :partial => 'shared/contact_form'
 
@@ -31,19 +29,4 @@
       =render_flash
 
     #content
-      #sidebar
-        =render :partial => 'shared/sidebar'
       =yield
-
-    = clear
-
-    #footer_background
-      #footer
-
-        %p= lorem
-
-        %ul#footer_navigation
-          %li= link_to 'Home', '#'
-          %li= link_to 'About', '#', :class => 'green'
-          %li= link_to 'Services', '#', :class => 'gold'
-          %li= link_to "Twitter", "http://twitter.com/jamesconroyfinn"

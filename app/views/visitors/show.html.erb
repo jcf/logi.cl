@@ -1,0 +1,18 @@
+<p>
+  <b>User agent:</b>
+  <%=h @visitor.user_agent %>
+</p>
+
+<p>
+  <b>Clicks:</b>
+  <%=h @visitor.clicks %>
+</p>
+
+<p>
+  <b>Remote addr:</b>
+  <%=h @visitor.remote_addr %>
+</p>
+
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>

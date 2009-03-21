@@ -1,10 +1,8 @@
 #contact_form
-  #ajax_flash
-    &nbsp;
-  - form_for :contact, :url => {:controller => 'contact', :action => 'create'} do |f|
+  - form_for :message, :url => {:controller => 'messages', :action => 'create'} do |f|
     #left_form
-      = f.label :message
-      = f.text_area :message, :size => '30x10'
+      = f.label :body, 'Message'
+      = f.text_area :body, :size => '30x10'
       = f.submit 'Send Message'
       = button_to_function 'Cancel', "$('#contact_form').slideUp();", :class => 'cancel'
     #right_form

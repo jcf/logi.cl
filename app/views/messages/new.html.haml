@@ -1,0 +1,16 @@
+%h1 message
+
+- form_for(@message) do |f|
+  = f.error_messages
+
+  = f.label :name
+  = f.text_field :name
+  = f.label :email
+  = f.text_field :email
+  = f.label :website
+  = f.text_field :website
+  = f.label :body, 'Message'
+  = f.text_area :body, :size => '30x10'
+
+  = f.submit 'Send Message'
+  %input{ :type => 'button', :id => 'cancel_button', :class => 'cancel', :value => 'Cancel' }

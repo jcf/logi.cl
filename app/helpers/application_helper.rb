@@ -8,7 +8,7 @@ module ApplicationHelper
   def render_flash
     return unless flash.present?
     html = flash.collect do |key, msg|
-      content_tag(:div, msg, :class => key, :id => "flash-#{key}")
+      content_tag(:div, content_tag(:p, msg, :class => key), :id => "flash_box")
     end
     html
   end

@@ -11,6 +11,11 @@ Rails::Initializer.run do |config|
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
 
+  config.action_controller.session = {
+    :key => "_logi.cl_session",
+    :secret => "5dd4b5d71539fcfa40f553771f78043c49c2d9d6fae164daa7f3fb87e4c94aa9718a27f4c30e84a0"
+  }
+
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
@@ -20,6 +25,8 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "tmail"
+
+  # config.gem "dchelimsky-rspec-rails", :source => "http://gems.github.com"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

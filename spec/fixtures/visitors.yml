@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_agent: MyText
+  clicks: 1
+  remote_addr: MyString
+
+two:
+  user_agent: MyText
+  clicks: 1
+  remote_addr: MyString
