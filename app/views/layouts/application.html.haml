@@ -21,7 +21,10 @@
           %li= tab_to 'logi.cl', root_url
           %li= tab_to 'about', about_url
           %li= tab_to 'services', services_url
-          %li= tab_to 'contact', messages_url, :id => 'contact_tab'
+          %li#contact_tab
+            = tab_to 'contact', messages_url
+          %li#inline_contact_tab
+            = link_to icon_tag('arrow_270', :title => 'Show quick contact form', :id => 'inline_contact_arrow_down') + icon_tag('arrow_090', :title => 'Hide quick contact form', :id => 'inline_contact_arrow_up', :style => 'display: none'), messages_url
     / #banner
     /   #tree
 

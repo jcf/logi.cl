@@ -23,9 +23,17 @@
 // }
 
 $(document).ready(function() {
-  $("#contact_tab").bind("click", function(e) {
+  $("li#inline_contact_tab a").bind("click", function(e) {
     speed = e.shiftKey ? 1000 : 200
-    $("#contact_form").slideToggle(speed);
+    $("#contact_form").slideToggle(speed, function() {
+      if ($(this).is(':visible')) {
+        $('#inline_contact_arrow_down').hide();
+        $('#inline_contact_arrow_up').show();
+      } else {
+        $('#inline_contact_arrow_down').show();
+        $('#inline_contact_arrow_up').hide();
+      };
+    });
     return false;
   });
   $("#cancel_button").bind("click", function() {

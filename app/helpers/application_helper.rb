@@ -45,6 +45,7 @@ module ApplicationHelper
   end
 
   def icon_tag(name, options={})
+    defaults = { :alt => name, :title => name }
     # shadowless?
     path = if options.include?(:shadowless)
       options.delete(:shadowless)
@@ -52,10 +53,11 @@ module ApplicationHelper
     else
       '/images/fugue'
     end
-    image_tag "#{path}/#{name}.png", options
+    image_tag "#{path}/#{name}.png", defaults.merge(options)
   end
 
   def clear(tag=:br, options={})
+    return tag(:br, { :class => 'clear_both' }.merge(options)) if tag == :br
     content_tag(tag, '', { :class => 'clear_both' }.merge(options))
   end
 end

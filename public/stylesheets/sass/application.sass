@@ -85,7 +85,8 @@ a:hover
 
       li
         :display inline
-        :padding-right 5px
+        :padding 0 5px 0 0
+        :margin 0
 
         a:link,
         a:active,
@@ -104,6 +105,30 @@ a:hover
         a.active
           :background-color = !nav_bar_bg
           :color #fff
+
+      li#contact_tab
+        :padding-right 0
+        a:link,
+        a:active,
+        a:visited,
+        a:hover
+          +no_rounded_corners
+          :border-top-left-radius = !border_radius
+          :-webkit-border-top-left-radius = !border_radius
+          :-moz-border-radius-topleft = !border_radius
+      li#inline_contact_tab
+        :padding-left 0
+        a:link,
+        a:active,
+        a:visited,
+        a:hover
+          :padding
+            :left 2px
+            :right 2px
+          +no_rounded_corners
+          :border-top-right-radius = !border_radius
+          :-webkit-border-top-right-radius = !border_radius
+          :-moz-border-radius-topright = !border_radius
 
 #contact_form
   :display none
