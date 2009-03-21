@@ -1,15 +1,7 @@
 .DS_Store
-assets
 coverage
 log/*.log
 db/*.sqlite3
-public/index.html
-public/about-us
-public/advisor
-public/client
-public/industry-partner
-public/solution
-public/uploads
-public/advisors
-public/privacy-policy
+public/stylesheets/*.css
+!public/stylesheets/reset.css
 tmp/**
