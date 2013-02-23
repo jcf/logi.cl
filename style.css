@@ -1,0 +1,39 @@
+html {
+  border-top: 3px solid #a00;
+}
+
+body {
+  background-color: #fdfdfd;
+  color: #111;
+  font: 18px "ff-tisa-web-pro", georgia, serif;
+  letter-spacing: -0.05em;
+  line-height: 1.4em;
+  margin: 40px auto 0;
+  width: 500px;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: normal;
+  margin-top: 0;
+  text-align: center;
+}
+
+h1 a {
+  border-bottom: 0 none;
+}
+
+a {
+  color: #a00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #e00;
+}

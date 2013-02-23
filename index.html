@@ -1,95 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <meta name="description" content="Logi.cl is James Conroy-Finn. It's nothing more than a vanity URL.">
 
     <title>logi.cl</title>
 
-    <style type="text/css" media="screen">
-      body {
-        background-color: #eee;
-        color: #333;
-        font: 24px/40px 'helvetica neue', helvetica, sans-serif;
-        letter-spacing: -0.05em;
-        padding: 0;
-        margin: 0;
-      }
-
-      h1 {
-        font-weight: normal;
-        margin-top: 0;
-      }
-
-      h1 a {
-        border-bottom: 0 none;
-      }
-
-      a {
-        color: #004080;
-        text-decoration: none;
-        border-bottom: 1px solid #ccc;
-        font-weight: bold;
-      }
-
-      a:hover {
-        color: #000;
-      }
-
-      a:active {
-        color: #ff0080;
-      }
-
-      #container {
-        width: 500px;
-        margin: 40px auto 0;
-      }
-
-      #main {
-        background-color: #fff;
-        padding: 40px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 4px 40px rgba(0, 0, 0, 0.1)
-      }
-
-      #main p.outro {
-        margin-bottom: 0;
-      }
-    </style>
+    <link href="http://www.gravatar.com/avatar/18c2795810ee15d41956e7f4cc5f3338?size=32" rel="icon">
+    <link href="/style.css" media="all" rel="stylesheet">
+    <script type="text/javascript" src="//use.typekit.net/vsh5kje.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
 
-  <body id="logicl">
-    <div id="container">
-      <div id="main">
-        <header>
-          <h1><a href="/">logi.cl</a></h1>
-        </header>
+  <body>
+    <header><h1><a href="/">logi.cl</a></h1></header>
 
-        <article>
-          <p>
-            Logi.cl is one of my domains. I am
-            <a href="http://jamesconroyfinn.com">James Conroy-Finn</a>.
-            You can find some of my work on
-            <a href="https://github.com/jcf">GitHub</a> if you're interested.
-          </p>
+    <article>
+      <p>
+        I am James Conroy-Finn, and this is one of my domains. You can find out
+        more about me at
+        <a href="http://jamesconroyfinn.com">jamesconroyfinn.com</a>.
+      </p>
 
-          <p class="outro">Have a nice day!</p>
-        </article>
-      </div>
-    </div>
+      <p>
+        Alternatively, you can find some of my work on
+        <a href="https://github.com/jcf">GitHub</a>,
+        or check out what I'm listening to over at
+        <a href="http://last.fm/user/jamesconroyfinn">last.fm</a>.
+      </p>
+
+      <p>Have a nice day!</p>
+    </article>
 
     <script type="text/javascript">
-      var _gauges = _gauges || [];
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1442849-7']);
+      _gaq.push(['_trackPageview']);
+
       (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4e0c95ba613f5d760a000002');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-
   </body>
 </html>
